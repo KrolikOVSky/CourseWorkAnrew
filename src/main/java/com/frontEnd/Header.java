@@ -15,17 +15,12 @@ public class Header {
 
     private final MenuBar mainMenuBar;
     private final Menu fileMenu = new Menu("File");
-    private final Menu editMenu = new Menu("Edit");
     private final Menu helpMenu = new Menu("Help");
     private final MenuItem newItem = new MenuItem("New");
     private final MenuItem openItem = new MenuItem("Open");
     private final MenuItem saveAsItem = new MenuItem("Save as...");
     private final MenuItem saveItem = new MenuItem("Save");
     private final MenuItem closeItem = new MenuItem("Close");
-    private final MenuItem addTableItem = new MenuItem("Add table");
-    private final MenuItem delTableItem = new MenuItem("Delete table");
-    private final MenuItem addRecordItem = new MenuItem("Add new record to table");
-    private final MenuItem delRecordItem = new MenuItem("Delete record from table");
     private final MenuItem helpItem = new MenuItem("Help");
     private final MenuItem aboutItem = new MenuItem("About...");
 
@@ -94,43 +89,6 @@ public class Header {
                 fileMenu.getItems().add(closeItem);
             }
 
-//          Edit
-            {
-//              Add table
-                {
-                    addTableItem.setOnAction(event -> {
-
-                    });
-                }
-
-//              Delete table
-                {
-                    delTableItem.setOnAction(event -> {
-
-                    });
-                }
-
-//              Add new record to table
-                {
-                    addRecordItem.setOnAction(event -> {
-
-                    });
-                }
-
-//              Delete record from table
-                {
-                    delRecordItem.setOnAction(event -> {
-
-                    });
-                }
-
-                editMenu.getItems().add(addTableItem);
-                editMenu.getItems().add(delTableItem);
-                editMenu.getItems().add(new SeparatorMenuItem());
-                editMenu.getItems().add(addRecordItem);
-                editMenu.getItems().add(delRecordItem);
-            }
-
 //          Help
             {
 //              Help
@@ -151,7 +109,6 @@ public class Header {
             }
 
             mainMenuBar.getMenus().add(fileMenu);
-            mainMenuBar.getMenus().add(editMenu);
             mainMenuBar.getMenus().add(helpMenu);
         }
     }

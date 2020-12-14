@@ -52,11 +52,9 @@ public class Flights {
         return flights.remove(getById(id));
     }
 
-    public Flights sort() {
+    public void sort() {
         Comparator<Flight> comparator = Comparator.comparing(Flight::getDestination).thenComparing(Flight::getDepartTime);
-        Flights flights = new Flights(this.flights);
-        flights.flights.sort(comparator);
-        return flights;
+        flights.sort(comparator);
     }
 
     public void removeByCondition(String value) {

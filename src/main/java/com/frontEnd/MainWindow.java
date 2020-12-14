@@ -196,7 +196,7 @@ public class MainWindow {
             {
                 sortBtn.setOnAction(event -> {
                     if (flights != null && !flights.getFlights().isEmpty()) {
-                        flights = flights.sort();
+                        flights.sort();
                     }
                 });
                 sortBtn.setMaxSize(MAX_VALUE, MAX_VALUE);
@@ -323,8 +323,8 @@ public class MainWindow {
         }
     }
 
-    private void addToTable(Flights schedules) {
-        mainTable.setItems(schedules.getFlights());
+    private void addToTable(Flights flights) {
+        mainTable.setItems(flights.getFlights());
     }
 
     public BorderPane getMainBoxOfElements() {

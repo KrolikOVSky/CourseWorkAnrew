@@ -51,8 +51,4 @@ public class ModalWindow {
         this.scene.setRoot(this.mainWorkSpace);
         this.stage.setScene(this.scene);
     }
-
-    public Stage getStage() {
-        return stage;
-    }
 }

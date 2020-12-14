@@ -16,9 +16,8 @@ public class Run extends Application {
     public void start(Stage primaryStage) {
         var mainWindow = new MainWindow();
         Global.initialize(mainWindow.getMainBoxOfElements());
-        Global.primaryStage.setScene(Global.mainScene);
-        Global.primaryStage.setResizable(false);
-        Global.primaryStage.setTitle("Program to work with database of transport");
+        Global.primaryStage.setResizable(true);
+        Global.primaryStage.setTitle("Program to work with database of flights");
         Global.primaryStage.getIcons().add(new Image("/com/images/icon.png"));
         Global.primaryStage.setOnCloseRequest(event -> {
             Platform.setImplicitExit(false);
