@@ -6,11 +6,18 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.RadioMenuItem;
+import javafx.scene.effect.BoxBlur;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class ModalWindow {
     private final Stage stage;
@@ -22,6 +29,7 @@ public class ModalWindow {
         this.mainWorkSpace = new BorderPane();
         this.scene = new Scene(new Pane());
         this.stage.initModality(Modality.WINDOW_MODAL);
+        this.stage.initStyle(StageStyle.UTILITY);
         this.stage.getIcons().add(Global.primaryStage.getIcons().get(0));
         this.stage.initOwner(Global.primaryStage);
         this.stage.setTitle(caption);
@@ -30,11 +38,18 @@ public class ModalWindow {
         this.stage.setResizable(false);
     }
 
-    public void showDialog(){
+    public void show(){
         this.stage.showAndWait();
     }
 
-    public void close(){ this.stage.close(); }
+    public void show(boolean withoutTop){
+        this.stage.initStyle(StageStyle.UNDECORATED);
+        this.stage.showAndWait();
+    }
+
+    public void close(){
+        this.stage.close();
+    }
 
     public void setMainWorkSpace(Pane node) {
         Button closeBtn = new Button("Cancel");

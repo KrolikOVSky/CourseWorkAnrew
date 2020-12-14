@@ -1,5 +1,6 @@
 package com;
 
+import com.frontEnd.AboutWindow;
 import com.frontEnd.MainWindow;
 import javafx.application.Application;
 import javafx.application.Platform;

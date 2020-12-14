@@ -185,7 +185,7 @@ public class MainWindow {
                             addBox.getChildren().add(commit);
                         }
                         modalWindow.setMainWorkSpace(addBox);
-                        modalWindow.showDialog();
+                        modalWindow.show();
                     }
                 });
                 addBtn.setMaxSize(MAX_VALUE, MAX_VALUE);
@@ -261,7 +261,7 @@ public class MainWindow {
 
                         ModalWindow window = new ModalWindow("Result 1");
                         window.setMainWorkSpace(mainBox);
-                        window.showDialog();
+                        window.show();
                     }
                 });
 
@@ -280,7 +280,7 @@ public class MainWindow {
                         content.getChildren().add(new Label(String.format("Total number of destinations are %d", flights.result2())));
                         ModalWindow modalWindow = new ModalWindow("Result 2");
                         modalWindow.setMainWorkSpace(content);
-                        modalWindow.showDialog();
+                        modalWindow.show();
                     }
                 });
 
@@ -455,7 +455,7 @@ public class MainWindow {
                             addBox.getChildren().add(commit);
                         }
                         modalWindow.setMainWorkSpace(addBox);
-                        modalWindow.showDialog();
+                        modalWindow.show();
                     }
                 });
 
